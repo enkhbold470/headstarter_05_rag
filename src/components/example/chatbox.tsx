@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import { BackgroundGradient } from "../ui/background-gradient";
 import { IconSend } from "@tabler/icons-react";
