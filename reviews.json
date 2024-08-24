@@ -1,0 +1,124 @@
+{
+  "reviews": [
+    {
+      "professor": "Dr. Emily Johnson",
+      "subject": "Biology",
+      "stars": 4,
+      "review": "Dr. Johnson's lectures are engaging and informative. She makes complex topics easy to understand."
+    },
+    {
+      "professor": "Prof. Michael Chen",
+      "subject": "Computer Science",
+      "stars": 5,
+      "review": "Brilliant professor! His passion for coding is contagious. Challenging but rewarding classes."
+    },
+    {
+      "professor": "Dr. Sarah Williams",
+      "subject": "Psychology",
+      "stars": 3,
+      "review": "Decent lectures, but the coursework can be overwhelming at times. Office hours are helpful."
+    },
+    {
+      "professor": "Prof. David Brown",
+      "subject": "History",
+      "stars": 4,
+      "review": "Prof. Brown brings history to life with his storytelling. Assignments are thought-provoking."
+    },
+    {
+      "professor": "Dr. Lisa Martinez",
+      "subject": "Chemistry",
+      "stars": 5,
+      "review": "Exceptional teacher! Her lab demonstrations are always exciting and educational."
+    },
+    {
+      "professor": "Prof. Robert Taylor",
+      "subject": "Mathematics",
+      "stars": 2,
+      "review": "Lectures can be confusing. More examples during class would be helpful."
+    },
+    {
+      "professor": "Dr. Amanda Lee",
+      "subject": "English Literature",
+      "stars": 4,
+      "review": "Dr. Lee's analysis of classic texts is insightful. Encourages critical thinking."
+    },
+    {
+      "professor": "Prof. James Wilson",
+      "subject": "Physics",
+      "stars": 5,
+      "review": "Challenging course, but Prof. Wilson's enthusiasm makes it enjoyable. Great at explaining complex concepts."
+    },
+    {
+      "professor": "Dr. Olivia Garcia",
+      "subject": "Sociology",
+      "stars": 3,
+      "review": "Interesting topics, but the class discussions could be more structured."
+    },
+    {
+      "professor": "Prof. Thomas Anderson",
+      "subject": "Economics",
+      "stars": 4,
+      "review": "Prof. Anderson relates economic theories to real-world scenarios effectively. Fair grader."
+    },
+    {
+      "professor": "Dr. Rachel Kim",
+      "subject": "Art History",
+      "stars": 5,
+      "review": "Passionate about the subject. Field trips to museums greatly enhance the learning experience."
+    },
+    {
+      "professor": "Prof. Daniel White",
+      "subject": "Political Science",
+      "stars": 3,
+      "review": "Knowledgeable professor, but lectures can be dry. More interactive sessions would be beneficial."
+    },
+    {
+      "professor": "Dr. Jessica Brown",
+      "subject": "Environmental Science",
+      "stars": 4,
+      "review": "Dr. Brown's practical approach to environmental issues is refreshing. Engaging projects."
+    },
+    {
+      "professor": "Prof. Christopher Lee",
+      "subject": "Philosophy",
+      "stars": 5,
+      "review": "Thought-provoking lectures. Prof. Lee encourages students to question and debate ideas."
+    },
+    {
+      "professor": "Dr. Sophia Patel",
+      "subject": "Neuroscience",
+      "stars": 4,
+      "review": "Challenging course material, but Dr. Patel makes it accessible. Helpful study guides provided."
+    },
+    {
+      "professor": "Prof. William Johnson",
+      "subject": "Business Administration",
+      "stars": 3,
+      "review": "Good overview of business concepts. More case studies would enhance practical understanding."
+    },
+    {
+      "professor": "Dr. Emma Thompson",
+      "subject": "Linguistics",
+      "stars": 5,
+      "review": "Dr. Thompson's passion for languages is inspiring. Engaging assignments and discussions."
+    },
+    {
+      "professor": "Prof. Alexander Wright",
+      "subject": "Mechanical Engineering",
+      "stars": 4,
+      "review": "Rigorous course, but Prof. Wright is always available to help. Practical projects are a plus."
+    },
+    {
+      "professor": "Dr. Natalie Chen",
+      "subject": "Anthropology",
+      "stars": 3,
+      "review": "Interesting subject matter. Lectures could be more organized, but Dr. Chen is knowledgeable."
+    },
+    {
+      "professor": "Prof. Ryan Miller",
+      "subject": "Music Theory",
+      "stars": 5,
+      "review": "Prof. Miller's innovative teaching methods make learning music theory enjoyable and accessible."
+    }
+  ]
+}
