@@ -1,8 +1,9 @@
-
+import ChatBoxComponent from "@/components/example/chatbox";
 export default function Home() {
   return (
-<div>
-    <h1>Hello World</h1>
-</div>
+<div className="flex flex-col items-center justify-center h-screen">
+
+    <ChatBoxComponent />
+  </div>
   );
 }
