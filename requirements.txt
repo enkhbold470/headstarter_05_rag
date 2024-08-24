@@ -1,0 +1,11 @@
+deptry==0.19.1
+importlib-metadata==8.4.0
+importlib-resources==6.4.0
+ipykernel==6.29.5
+jaraco.text==3.12.1
+openai==1.37.0
+ordered-set==4.1.0
+pickleshare==0.7.5
+pinecone==5.0.1
+pip-chill==1.0.3
+python-dotenv==0.21.0
