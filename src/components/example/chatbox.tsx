@@ -23,6 +23,13 @@ export default function ChatBoxComponent() {
   return (
     <div className="flex items-center justify-center">
       <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
+        <div className="flex flex-col gap-2">
+          {messages.map((message, index) => (
+            <div key={index} className={`text-${message.sender}`}>
+              {message.text}
+            </div>
+          ))}
+        </div>
         <div className="flex rounded gap-1">
           <Input
             placeholder="Type your message here."
