@@ -10,6 +10,7 @@ interface ChatListProps {
   selectedUser: UserData;
   sendMessage: (newMessage: Message) => void;
   isMobile: boolean;
+  isLoading: boolean;
 }
 
 export function ChatList({
@@ -17,6 +18,7 @@ export function ChatList({
   selectedUser,
   sendMessage,
   isMobile,
+  isLoading,
 }: ChatListProps) {
   const messagesContainerRef = useRef<HTMLDivElement>(null);
 
@@ -70,7 +72,7 @@ export function ChatList({
                   </Avatar>
                 )}
                 <span className=" bg-accent p-3 rounded-md max-w-xs">
-                  {message.message}
+                  {isLoading ? "Loading..." : message.message}
                 </span>
                 {message.name !== selectedUser.name && (
                   <Avatar className="flex justify-center items-center">

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-
+import { ClerkProvider } from "@clerk/nextjs";
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
-
+import FloatingNavbar from "@/components/example/floating-navbar-demo";
+import { SiteFooter } from "@/components/site-footer";
 export const metadata: Metadata = {
   title: "Who is the best professor?",
   description: "Find the best professor for you",
@@ -22,8 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={roboto.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={roboto.className}>
+          <FloatingNavbar />
+          {children}
+          <footer className="w-full flex justify-center items-end">
+            <SiteFooter />
+          </footer>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
