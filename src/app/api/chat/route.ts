@@ -85,5 +85,6 @@ export async function POST(req: any) {
       }
     },
   });
+  console.log(stream);
   return new NextResponse(stream);
 }
