@@ -13,6 +13,7 @@ export function Chatbox({ selectedUser }: ChatboxProps) {
     selectedUser.messages || []
   );
   const [isMobile, setIsMobile] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const checkScreenWidth = (): void => {
@@ -29,6 +30,7 @@ export function Chatbox({ selectedUser }: ChatboxProps) {
 
   const sendMessage = async (newMessage: Message) => {
     setMessages([...messages, newMessage]);
+    setIsLoading(true);
 
     try {
       const response = await fetch("/api/chat", {
@@ -59,16 +61,19 @@ export function Chatbox({ selectedUser }: ChatboxProps) {
       setMessages((prevMessages) => [...prevMessages, aiMessage]);
     } catch (error) {
       console.error("Error sending message:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full w-full">
       <ChatList
         messages={messages}
         selectedUser={selectedUser}
         sendMessage={sendMessage}
         isMobile={isMobile}
+        isLoading={isLoading}
       />
     </div>
   );

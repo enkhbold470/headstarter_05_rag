@@ -1,9 +1,8 @@
-import ShadcnChat from "@/components/example/shadcn_chat";
-
+import HeroHome from "@/components/home";
 export default function Home() {
   return (
     <div>
-      <ShadcnChat />
+      <HeroHome />
     </div>
   );
 }
