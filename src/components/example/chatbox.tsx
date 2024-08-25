@@ -19,13 +19,22 @@ export default function ChatBoxComponent() {
     setMessages([...messages, newMessage]);
     setInput("");
   };
+  const onKeyDown = (e: any) => {
+    if (e.key == "Enter") {
+      console.log("You hit enter.");
+      handleSendMessage();
+    }
+  };
 
   return (
     <div className="flex items-center justify-center">
       <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 overflow-y-scroll h-[400px] items-end">
           {messages.map((message, index) => (
-            <div key={index} className={`text-${message.sender}`}>
+            <div
+              key={index}
+              className={`text-${message.sender} border-2 border-blue-500 rounded-full p-2`}
+            >
               {message.text}
             </div>
           ))}
@@ -36,10 +45,11 @@ export default function ChatBoxComponent() {
             className="rounded opacity-50"
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            onKeyDown={onKeyDown}
           />
           <Button
             variant="outline"
-            className=" rounded px-4 bg-blue-500 hover:bg-blue-600 text-white"
+            className="rounded px-4 bg-blue-500 hover:bg-blue-600 text-white"
             onClick={handleSendMessage}
           >
             <IconSend />
