@@ -65,26 +65,7 @@ export async function POST(req: any) {
       { role: "user", content: lastMessageContent },
     ],
     model: "gpt-4o-mini",
-    stream: true,
+    stream: false,
   });
-  const stream = new ReadableStream({
-    async start(controller) {
-      const encoder = new TextEncoder();
-      try {
-        for await (const chunk of completion) {
-          const content = chunk.choices[0]?.delta?.content;
-          if (content) {
-            const text = encoder.encode(content);
-            controller.enqueue(text);
-          }
-        }
-      } catch (error) {
-        controller.error(error);
-      } finally {
-        controller.close();
-      }
-    },
-  });
-  console.log(stream);
-  return new NextResponse(stream);
+  return new NextResponse(completion.choices[0].message.content);
 }

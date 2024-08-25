@@ -5,7 +5,7 @@ import { Info, Phone, Video } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "../ui/button";
-
+import softwareUpdateDate from "../../../softwareUpdateDate.json";
 interface ChatTopbarProps {
   selectedUser: UserData;
 }
@@ -27,11 +27,13 @@ export default function ChatTopbar({ selectedUser }: ChatTopbarProps) {
         </Avatar>
         <div className="flex flex-col">
           <span className="font-medium">{selectedUser.name}</span>
-          <span className="text-xs">Active 2 mins ago</span>
+          <span className="text-xs">
+            Last release: {softwareUpdateDate.date}
+          </span>
         </div>
       </div>
 
-      <div>
+      {/* <div>
         {TopbarIcons.map((icon, index) => (
           <Link
             key={index}
@@ -45,7 +47,7 @@ export default function ChatTopbar({ selectedUser }: ChatTopbarProps) {
             <icon.icon size={20} className="text-muted-foreground" />
           </Link>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

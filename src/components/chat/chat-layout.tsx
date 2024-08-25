@@ -10,7 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Sidebar } from "../sidebar";
 import { Chat } from "./chat";
-
+import { Chatbox } from "../Chatbox";
 interface ChatLayoutProps {
   defaultLayout: number[] | undefined;
   defaultCollapsed?: boolean;
@@ -89,11 +89,8 @@ export function ChatLayout({
       </ResizablePanel> */}
       {/* <ResizableHandle withHandle /> */}
       <ResizablePanel defaultSize={defaultLayout[1]} minSize={30}>
-        <Chat
-          messages={selectedUser.messages}
-          selectedUser={selectedUser}
-          isMobile={isMobile}
-        />
+        <Chat selectedUser={selectedUser} />
+        <Chatbox selectedUser={selectedUser} />
       </ResizablePanel>
     </ResizablePanelGroup>
   );
