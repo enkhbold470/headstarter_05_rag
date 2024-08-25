@@ -1,9 +1,4 @@
-import ChatBoxComponent from "@/components/example/chatbox";
+import ShadcnChat from "@/components/example/shadcn_chat";
 export default function Home() {
-  return (
-<div className="flex flex-col items-center justify-center h-screen">
-
-    <ChatBoxComponent />
-  </div>
-  );
+  return <ShadcnChat />;
 }
