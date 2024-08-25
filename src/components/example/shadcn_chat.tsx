@@ -1,8 +1,5 @@
 import { cookies } from "next/headers";
 import { ChatLayout } from "@/components/chat/chat-layout";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function ShadcnChat() {
@@ -11,10 +8,11 @@ export default function ShadcnChat() {
 
   return (
     <main className="flex h-[calc(100dvh)] flex-col items-center justify-center p-4 md:px-24 py-32 gap-4">
-      <div className="flex justify-between max-w-5xl w-full items-center">
+      <div className="flex justify-between max-w-5xl w-full items-end">
         <Link href="/" className="text-4xl font-bold">
-          Who is your professor?
+          Welcome to the ProfGuru!
         </Link>
+        <p>RateMyProfessor AI Chatbot!</p>
       </div>
 
       <div className="z-10 border rounded-lg max-w-5xl w-full h-full text-sm lg:flex ">

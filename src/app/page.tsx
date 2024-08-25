@@ -1,4 +1,9 @@
 import ShadcnChat from "@/components/example/shadcn_chat";
+
 export default function Home() {
-  return <ShadcnChat />;
+  return (
+    <div>
+      <ShadcnChat />
+    </div>
+  );
 }
