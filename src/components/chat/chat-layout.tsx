@@ -1,6 +1,6 @@
 "use client";
 
-import { userData } from "../../app/data";
+import { userData } from "@/app/data";
 import React, { useEffect, useState } from "react";
 import {
   ResizableHandle,
@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { Sidebar } from "../sidebar";
 import { Chat } from "./chat";
 import { Chatbox } from "../Chatbox";
+
 interface ChatLayoutProps {
   defaultLayout: number[] | undefined;
   defaultCollapsed?: boolean;
@@ -72,24 +73,22 @@ export function ChatLayout({
           )}`;
         }}
         className={cn(
-          isCollapsed &&
-            "min-w-[50px] md:min-w-[70px] transition-all duration-300 ease-in-out"
+          isCollapsed && "min-w-[50px] md:min-w-[70px] transition-all duration-300 ease-in-out"
         )}
       >
         <Sidebar
           isCollapsed={isCollapsed || isMobile}
-          links={userData.map((user) => ({
+          chats={userData.map((user) => ({
             name: user.name,
             messages: user.messages ?? [],
             avatar: user.avatar,
-            variant: selectedUser.name === user.name ? "grey" : "ghost",
+            variant: selectedUser.name === user.name ? "secondary" : "ghost",
           }))}
           isMobile={isMobile}
         />
-      </ResizablePanel> */}
-      {/* <ResizableHandle withHandle /> */}
+      </ResizablePanel>
+      <ResizableHandle withHandle /> */}
       <ResizablePanel defaultSize={defaultLayout[1]} minSize={30}>
-        <Chat selectedUser={selectedUser} />
         <Chatbox selectedUser={selectedUser} />
       </ResizablePanel>
     </ResizablePanelGroup>
