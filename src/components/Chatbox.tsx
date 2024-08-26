@@ -67,13 +67,13 @@ export function Chatbox({ selectedUser }: ChatboxProps) {
   };
 
   return (
-    <div className="flex flex-col h-full w-full">
+    <div className="flex flex-col h-full w-full ">
       <ChatList
         messages={messages}
         selectedUser={selectedUser}
         sendMessage={sendMessage}
         isMobile={isMobile}
-        isLoading={isLoading}
+        // isLoading={isLoading}
       />
     </div>
   );
