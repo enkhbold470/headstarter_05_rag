@@ -9,7 +9,7 @@ import {
   ChatBubbleTimestamp,
   ChatBubble,
 } from "../ui/chat/chat-bubble";
-
+import Markdown from "react-markdown";
 interface ChatListProps {
   messages: Message[];
   selectedUser: UserData;
@@ -66,10 +66,13 @@ export function ChatList({
                 <ChatBubble variant={variant}>
                   <ChatBubbleAvatar src={message.avatar} />
                   <ChatBubbleMessage variant={variant}>
-                    {message.message}
+                    {/* {message.message} */}
                     {/* {message.timestamp && (
                       <ChatBubbleTimestamp timestamp={message.timestamp} />
                     )} */}
+                    <div className="font-mono">
+                      <Markdown>{message.message}</Markdown>
+                    </div>
                   </ChatBubbleMessage>
                 </ChatBubble>
               </motion.div>
